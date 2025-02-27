@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - MNP Ajira Club</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- TOP BAR (Green) -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <!-- Search button with inline SVG icon -->
+        <button class="search-btn" onclick="toggleSearch()">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M10,2A8,8,0,0,1,18,10a7.92,7.92,0,0,1-1.34,4.44l5.85,5.85a1,1,0,1,1-1.41,1.41l-5.85-5.85A8,8,0,1,1,10,2Zm0,2a6,6,0,1,0,6,6A6,6,0,0,0,10,4Z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="top-bar-right">
+        <!-- Inline SVG placeholders for social icons -->
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M24,4.56a9.94,9.94,0,0,1-2.82.77A4.94,4.94,0,0,0,23.34,3a9.86,9.86,0,0,1-3.13,1.2A4.92,4.92,0,0,0,16.68,2a4.92,4.92,0,0,0-4.92,4.92,5.14,5.14,0,0,0,.13,1.12A14,14,0,0,1,1.64,2.85a4.9,4.9,0,0,0-.66,2.47A4.92,4.92,0,0,0,3.15,9.41,4.88,4.88,0,0,1,.96,9V9a4.93,4.93,0,0,0,3.94,4.82,4.9,4.9,0,0,1-2.21.08,4.93,4.93,0,0,0,4.6,3.42A9.86,9.86,0,0,1,0,19.54,13.9,13.9,0,0,0,7.55,21,14,14,0,0,0,21.59,7.06c0-.21,0-.42,0-.63A10,10,0,0,0,24,4.56Z"/>
+        </svg></a>
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M22.46,6A16.08,16.08,0,0,1,4.54,6,11.42,11.42,0,0,0,8,9.75,5.71,5.71,0,0,1,3.8,8.28v.07A5.71,5.71,0,0,0,5.67,13a5.64,5.64,0,0,1-2.58.1,5.72,5.72,0,0,0,5.33,4A11.46,11.46,0,0,1,2,18.58a16.17,16.17,0,0,0,8.74,2.56c10.48,0,16.2-8.68,15.88-16.46A11.42,11.42,0,0,0,24,4.56,11.07,11.07,0,0,1,22.46,6Z"/>
+        </svg></a>
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12,2.16c3.2,0,3.58,0,4.84.07a6.08,6.08,0,0,1,4.29,1.56A6.08,6.08,0,0,1,22.69,8c.06,1.26.06,1.64.06,4.84s0,3.58-.06,4.84a6.08,6.08,0,0,1-1.56,4.29A6.08,6.08,0,0,1,16.84,23.69c-1.26.06-1.64.06-4.84.06s-3.58,0-4.84-.06a6.08,6.08,0,0,1-4.29-1.56A6.08,6.08,0,0,1,1.31,17.68c-.06-1.26-.06-1.64-.06-4.84s0-3.58.06-4.84A6.08,6.08,0,0,1,2.87,4.71,6.08,6.08,0,0,1,7.16,3.16c1.26-.06,1.64-.06,4.84-.06M12,0C8.74,0,8.33,0,7.05.07A8.09,8.09,0,0,0,1.39,2.36,8.1,8.1,0,0,0,.07,7.05C0,8.33,0,8.74,0,12s0,3.67.07,4.95a8.12,8.12,0,0,0,2.29,5.66A8.09,8.09,0,0,0,7.05,24c1.28.07,1.69.07,4.95.07s3.67,0,4.95-.07a8.09,8.09,0,0,0,5.66-2.29A8.12,8.12,0,0,0,24,16.05c.07-1.28.07-1.69.07-4.95s0-3.67-.07-4.95A8.09,8.09,0,0,0,21.64,1.39,8.09,8.09,0,0,0,16.95.07C15.67,0,15.26,0,12,0Z"/>
+          <circle cx=\"12\" cy=\"12\" r=\"3.2\"/>
+        </svg></a>
+      </div>
+    </div>
+    
+    <!-- MAIN NAV (White) -->
+    <div class="main-nav">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="MNP Ajira Logo">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="register.html">My account</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <!-- SEARCH OVERLAY POPUP -->
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-overlay-content">
+        <input type="text" placeholder="Type your search here..." />
+        <br/>
+        <button onclick="toggleSearch()">Close</button>
+      </div>
+    </div>
+
+  <!-- Privacy Policy Content -->
+  <main class="privacy-policy">
+    <h1>Privacy Policy</h1>
+    <p>Last Updated: [Insert Date]</p>
+    
+    <h2>Introduction</h2>
+    <p>
+      Welcome to MNP Ajira Club ("we", "us", "our"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. By using our website, you agree to the practices described in this policy.
+    </p>
+    
+    <h2>Information We Collect</h2>
+    <p>
+      We may collect both personal and non-personal information from you. Personal information may include your name, email address, phone number, and any other details you provide when you register, subscribe to our newsletter, or fill out a contact form. Non-personal information such as your IP address, browser type, and usage data may also be collected for analytical purposes.
+    </p>
+    
+    <h2>How We Use Your Information</h2>
+    <p>
+      Your information is used to provide you with our services, improve our website, communicate with you, and personalize your experience. We may also use your information for internal research and analytics.
+    </p>
+    
+    <h2>Cookies and Tracking Technologies</h2>
+    <p>
+      We use cookies and similar tracking technologies to enhance your experience, analyze website usage, and assist in our marketing efforts. You can control cookie preferences through your browser settings.
+    </p>
+    
+    <h2>Data Security</h2>
+    <p>
+      We implement reasonable security measures to protect your personal data. However, please note that no method of transmission over the Internet is completely secure.
+    </p>
+    
+    <h2>Sharing Your Information</h2>
+    <p>
+      We do not sell or trade your personal information to third parties. We may share your data with trusted service providers who help us operate our website and deliver our services, provided they agree to keep your information confidential.
+    </p>
+    
+    <h2>Third-Party Links</h2>
+    <p>
+      Our website may contain links to third-party sites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review their privacy policies.
+    </p>
+    
+    <h2>Children’s Privacy</h2>
+    <p>
+      Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately.
+    </p>
+    
+    <h2>Changes to This Privacy Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically.
+    </p>
+    
+    <h2>Contact Us</h2>
+    <p>
+      If you have any questions or concerns about this Privacy Policy, please contact us at 
+      <a href="mailto:info@mnpajiraclub.com">info@mnpajiraclub.com</a>.
+    </p>
+  </main>
+
+  <!-- Footer Section (you can include your site's footer here) -->
+  <footer>
+    <div class="newsletter">
+      <h3>Subscribe to Our Newsletter</h3>
+      <input type="email" placeholder="Enter your email">
+      <button>Subscribe</button>
+    </div>
+    <div class="footer-links">
+      <div><a href="about.html">About Us</a></div>
+      <div><a href="contact.html">Contact</a></div>
+      <div><a href="our-services.html">Services</a></div>
+      <div><a href="privacy.html">Privacy Policy</a></div>
+    </div>
+    <p>&copy; 2025 MNP Ajira Club. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

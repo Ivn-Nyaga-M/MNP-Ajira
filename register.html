@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join Us - Ajira Club</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- TOP BAR (Green) -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <!-- Search button with inline SVG icon -->
+      <button class="search-btn" onclick="toggleSearch()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M10,2A8,8,0,0,1,18,10a7.92,7.92,0,0,1-1.34,4.44l5.85,5.85a1,1,0,1,1-1.41,1.41l-5.85-5.85A8,8,0,1,1,10,2Zm0,2a6,6,0,1,0,6,6A6,6,0,0,0,10,4Z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="top-bar-right">
+      <!-- Inline SVG placeholders for social icons -->
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M24,4.56a9.94,9.94,0,0,1-2.82.77A4.94,4.94,0,0,0,23.34,3a9.86,9.86,0,0,1-3.13,1.2A4.92,4.92,0,0,0,16.68,2a4.92,4.92,0,0,0-4.92,4.92,5.14,5.14,0,0,0,.13,1.12A14,14,0,0,1,1.64,2.85a4.9,4.9,0,0,0-.66,2.47A4.92,4.92,0,0,0,3.15,9.41,4.88,4.88,0,0,1,.96,9V9a4.93,4.93,0,0,0,3.94,4.82,4.9,4.9,0,0,1-2.21.08,4.93,4.93,0,0,0,4.6,3.42A9.86,9.86,0,0,1,0,19.54,13.9,13.9,0,0,0,7.55,21,14,14,0,0,0,21.59,7.06c0-.21,0-.42,0-.63A10,10,0,0,0,24,4.56Z"/>
+      </svg></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M22.46,6A16.08,16.08,0,0,1,4.54,6,11.42,11.42,0,0,0,8,9.75,5.71,5.71,0,0,1,3.8,8.28v.07A5.71,5.71,0,0,0,5.67,13a5.64,5.64,0,0,1-2.58.1,5.72,5.72,0,0,0,5.33,4A11.46,11.46,0,0,1,2,18.58a16.17,16.17,0,0,0,8.74,2.56c10.48,0,16.2-8.68,15.88-16.46A11.42,11.42,0,0,0,24,4.56,11.07,11.07,0,0,1,22.46,6Z"/>
+      </svg></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12,2.16c3.2,0,3.58,0,4.84.07a6.08,6.08,0,0,1,4.29,1.56A6.08,6.08,0,0,1,22.69,8c.06,1.26.06,1.64.06,4.84s0,3.58-.06,4.84a6.08,6.08,0,0,1-1.56,4.29A6.08,6.08,0,0,1,16.84,23.69c-1.26.06-1.64.06-4.84.06s-3.58,0-4.84-.06a6.08,6.08,0,0,1-4.29-1.56A6.08,6.08,0,0,1,1.31,17.68c-.06-1.26-.06-1.64-.06-4.84s0-3.58.06-4.84A6.08,6.08,0,0,1,2.87,4.71,6.08,6.08,0,0,1,7.16,3.16c1.26-.06,1.64-.06,4.84-.06M12,0C8.74,0,8.33,0,7.05.07A8.09,8.09,0,0,0,1.39,2.36,8.1,8.1,0,0,0,.07,7.05C0,8.33,0,8.74,0,12s0,3.67.07,4.95a8.12,8.12,0,0,0,2.29,5.66A8.09,8.09,0,0,0,7.05,24c1.28.07,1.69.07,4.95.07s3.67,0,4.95-.07a8.09,8.09,0,0,0,5.66-2.29A8.12,8.12,0,0,0,24,16.05c.07-1.28.07-1.69.07-4.95s0-3.67-.07-4.95A8.09,8.09,0,0,0,21.64,1.39,8.09,8.09,0,0,0,16.95.07C15.67,0,15.26,0,12,0Z"/>
+        <circle cx=\"12\" cy=\"12\" r=\"3.2\"/>
+      </svg></a>
+    </div>
+  </div>
+  
+  <!-- MAIN NAV (White) -->
+  <div class="main-nav">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="MNP Ajira Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="register.html">My account</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- SEARCH OVERLAY POPUP -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-overlay-content">
+      <input type="text" placeholder="Type your search here..." />
+      <br/>
+      <button onclick="toggleSearch()">Close</button>
+    </div>
+  </div>
+  
+  <!-- Hero Section -->
+  <section class="join-hero">
+    <h1>Become a Member</h1>
+    <p>Unlock your potential with Ajira Club. Join us today and start your journey to digital success.</p>
+  </section>
+  
+  <!-- Authentication Section (Registration/Login) -->
+  <section class="auth-section">
+    <div class="auth-container">
+      <!-- Registration Form -->
+      <div class="form-container register-form">
+        <h2>Register</h2>
+        <form action="#" method="post" class="join-form">
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Your Full Name" required>
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Email Address</label>
+            <input type="email" id="reg-email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="reg-phone">Phone Number</label>
+            <input type="text" id="reg-phone" name="phone" placeholder="Your Phone Number" required>
+          </div>
+          <div class="form-group">
+            <label for="interest">Area of Interest</label>
+            <select id="interest" name="interest" required>
+              <option value="">Select an Option</option>
+              <option value="digital-marketing">Digital Marketing</option>
+              <option value="web-development">Web Development</option>
+              <option value="graphic-design">Graphic Design</option>
+              <option value="data-entry">Data Entry</option>
+              <option value="transcription">Transcription</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="reg-message">Tell us why you want to join</label>
+            <textarea id="reg-message" name="message" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit">Submit Application</button>
+        </form>
+        <p class="toggle-text">Already have an account? <a href="#" id="show-login">Login here</a></p>
+      </div>
+      
+      <!-- Login Form -->
+      <div class="form-container login-form" style="display: none;">
+        <h2>Login</h2>
+        <form action="#" method="post" class="login-form-inner">
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <input type="email" id="login-email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" placeholder="Your Password" required>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <p class="toggle-text">Don't have an account? <a href="#" id="show-register">Register here</a></p>
+        <p class="forgot"><a href="#">Forgot Password?</a></p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="newsletter">
+      <h3>Subscribe to Our Newsletter</h3>
+      <input type="email" placeholder="Enter your email">
+      <button>Subscribe</button>
+    </div>
+    <div class="footer-links">
+      <div>About Us</div>
+      <div>Contact</div>
+      <div>Services</div>
+      <div>Privacy Policy</div>
+    </div>
+  </footer>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* =========================
+       1) TOP BAR (GREEN)
+       ========================= */
+    .top-bar {
+      background-color: #046307; /* Deep green */
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 20px;
+    }
+    /* Left side: Search icon */
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+    }
+    .search-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+    }
+    .search-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+      transition: opacity 0.3s;
+    }
+    .search-btn:hover svg {
+      opacity: 0.8;
+    }
+    
+    /* Right side: Social icons */
+    .top-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .top-bar-right a svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+    .top-bar-right a svg:hover {
+      opacity: 0.8;
+    }
+    
+    /* =========================
+       2) MAIN NAV (WHITE)
+       ========================= */
+    .main-nav {
+    color: #046307; /* Ensures text inside inherits this color */
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #046307; /* Ensures logo remains green */
+    }
+
+    .logo img {
+    width: 150px; /* Adjust size */
+    height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    
+    nav ul li a {
+      color: #046307; /* Change from #333 to #046307 to match your theme */
+      font-weight: 600;
+      transition: color 0.3s;
+      text-decoration: none; /* Optional: removes underline */
+    }
+
+    nav ul li a:hover {
+      color: #024c05; /* Slightly darker green for hover effect */
+    }
+    /* =========================
+       3) SEARCH OVERLAY
+       ========================= */
+    .search-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      z-index: 9999;
+    }
+    .search-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .search-overlay-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .search-overlay-content input {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .search-overlay-content button {
+      background: #046307;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .search-overlay-content button:hover {
+      opacity: 0.9;
+    }
+    /* Join Us Hero Section */
+    .join-hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: url('dummy.jpg') no-repeat center center/cover;
+      color: white;
+      position: relative;
+    }
+    .join-hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: -1;
+    }
+    .join-hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .join-hero p {
+      font-size: 1.2em;
+    }
+    
+    /* Auth Section */
+    .auth-section {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+    }
+    .auth-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .form-container h2 {
+      color: green;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-container button {
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .toggle-text {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9em;
+    }
+    .toggle-text a,
+    .forgot a {
+      color: green;
+      text-decoration: none;
+    }
+    
+    /* Footer (consistent with other pages) */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .newsletter input {
+      padding: 10px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+  </style>
+  
+  <script>
+    // Simple toggle for registration and login forms
+    document.getElementById('show-login').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.register-form').style.display = 'none';
+      document.querySelector('.login-form').style.display = 'block';
+    });
+    document.getElementById('show-register').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.login-form').style.display = 'none';
+      document.querySelector('.register-form').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

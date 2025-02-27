@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MNP Ajira</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <!-- TOP BAR (Green) -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <!-- Search button with inline SVG icon -->
+      <button class="search-btn" onclick="toggleSearch()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M10,2A8,8,0,0,1,18,10a7.92,7.92,0,0,1-1.34,4.44l5.85,5.85a1,1,0,1,1-1.41,1.41l-5.85-5.85A8,8,0,1,1,10,2Zm0,2a6,6,0,1,0,6,6A6,6,0,0,0,10,4Z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="top-bar-right">
+      <!-- Inline SVG placeholders for social icons -->
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M24,4.56a9.94,9.94,0,0,1-2.82.77A4.94,4.94,0,0,0,23.34,3a9.86,9.86,0,0,1-3.13,1.2A4.92,4.92,0,0,0,16.68,2a4.92,4.92,0,0,0-4.92,4.92,5.14,5.14,0,0,0,.13,1.12A14,14,0,0,1,1.64,2.85a4.9,4.9,0,0,0-.66,2.47A4.92,4.92,0,0,0,3.15,9.41,4.88,4.88,0,0,1,.96,9V9a4.93,4.93,0,0,0,3.94,4.82,4.9,4.9,0,0,1-2.21.08,4.93,4.93,0,0,0,4.6,3.42A9.86,9.86,0,0,1,0,19.54,13.9,13.9,0,0,0,7.55,21,14,14,0,0,0,21.59,7.06c0-.21,0-.42,0-.63A10,10,0,0,0,24,4.56Z"/>
+      </svg></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M22.46,6A16.08,16.08,0,0,1,4.54,6,11.42,11.42,0,0,0,8,9.75,5.71,5.71,0,0,1,3.8,8.28v.07A5.71,5.71,0,0,0,5.67,13a5.64,5.64,0,0,1-2.58.1,5.72,5.72,0,0,0,5.33,4A11.46,11.46,0,0,1,2,18.58a16.17,16.17,0,0,0,8.74,2.56c10.48,0,16.2-8.68,15.88-16.46A11.42,11.42,0,0,0,24,4.56,11.07,11.07,0,0,1,22.46,6Z"/>
+      </svg></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12,2.16c3.2,0,3.58,0,4.84.07a6.08,6.08,0,0,1,4.29,1.56A6.08,6.08,0,0,1,22.69,8c.06,1.26.06,1.64.06,4.84s0,3.58-.06,4.84a6.08,6.08,0,0,1-1.56,4.29A6.08,6.08,0,0,1,16.84,23.69c-1.26.06-1.64.06-4.84.06s-3.58,0-4.84-.06a6.08,6.08,0,0,1-4.29-1.56A6.08,6.08,0,0,1,1.31,17.68c-.06-1.26-.06-1.64-.06-4.84s0-3.58.06-4.84A6.08,6.08,0,0,1,2.87,4.71,6.08,6.08,0,0,1,7.16,3.16c1.26-.06,1.64-.06,4.84-.06M12,0C8.74,0,8.33,0,7.05.07A8.09,8.09,0,0,0,1.39,2.36,8.1,8.1,0,0,0,.07,7.05C0,8.33,0,8.74,0,12s0,3.67.07,4.95a8.12,8.12,0,0,0,2.29,5.66A8.09,8.09,0,0,0,7.05,24c1.28.07,1.69.07,4.95.07s3.67,0,4.95-.07a8.09,8.09,0,0,0,5.66-2.29A8.12,8.12,0,0,0,24,16.05c.07-1.28.07-1.69.07-4.95s0-3.67-.07-4.95A8.09,8.09,0,0,0,21.64,1.39,8.09,8.09,0,0,0,16.95.07C15.67,0,15.26,0,12,0Z"/>
+        <circle cx=\"12\" cy=\"12\" r=\"3.2\"/>
+      </svg></a>
+    </div>
+  </div>
+  
+  <!-- MAIN NAV (White) -->
+  <div class="main-nav">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="MNP Ajira Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="register.html">My account</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- SEARCH OVERLAY POPUP -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-overlay-content">
+    <input type="text" id="searchInput" placeholder="Type your search here..." onkeydown="handleEnter(event)"/>
+    <br/>
+    <button onclick="performSearch()">Search</button>
+    <button onclick="toggleSearch()">Close</button>
+  </div>
+</div>
+
+  <!-- HERO SECTION (EXAMPLE) -->
+  <section class="hero-section">
+    <!-- Left: Heading & Text -->
+    <div class="hero-content">
+      <h1>MNP Ajira</h1>
+      <p>
+        Unlock online career opportunities with expert training and support for a successful digital future.
+      </p>
+      <div class="hero-buttons">
+        <button><a href="./register.html">Join Us</a></button>
+        <button><a href="./about.html">Learn More</a></button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero2.jpg" alt="Hero Image"/>
+    </div>
+  </section>
+  
+  <section class="hero">
+    <h1>MNP Ajira Club</h1>
+    <p>Learn digital skills and earn through online work.</p>
+    <button class="hero-btn">Join Us</button>
+    <button class="hero-btn">Learn More</button>
+  </section>
+
+  <section class="trainings">
+    <h2>Join MNP Ajira Digital Club for tailored trainings.</h2>
+    <p class="training-subtitle">Personalized online training opportunities tailored just for your career growth</p>
+    <div class="training-list">
+      <div class="training-item">
+        <img src="dummy.jpg" alt="Data Entry">
+        <h3>Data Entry</h3>
+        <p>Develop accurate and efficient data entry skills.</p>
+      </div>
+      <div class="training-item">
+        <img src="dummy.jpg" alt="Transcription">
+        <h3>Transcription</h3>
+        <p>Master transcription skills for career advancement and professional opportunities.</p>
+      </div>
+      <div class="training-item">
+        <img src="dummy.jpg" alt="Graphic Design">
+        <h3>Graphic Design</h3>
+        <p>Create stunning visuals and marketing materials.</p>
+      </div>
+      <div class="training-item">
+        <img src="dummy.jpg" alt="Data Analysis">
+        <h3>Data Analysis</h3>
+        <p>Dive into artificial intelligence and data analytics.</p>
+      </div>
+      <div class="training-item">
+        <img src="dummy.jpg" alt="Digital Marketing">
+        <h3>Digital Marketing</h3>
+        <p>Master online marketing strategies for business growth.</p>
+      </div>
+      <div class="training-item">
+        <img src="dummy.jpg" alt="Content Writing">
+        <h3>Content Writing</h3>
+        <p>Create compelling content that drives engagement.</p>
+      </div>
+      <div class="training-item">
+        <img src="dummy.jpg" alt="SEO">
+        <h3>SEO</h3>
+        <p>Improve website rankings with search engine optimization techniques.</p>
+      </div>
+    </div>
+    <div class="training-contact">
+      <button class="contact-button">Contact Us</button>
+    </div>
+  </section>
+
+  <!-- Popular Services Section now features a button -->
+  <section class="popular-services">
+    <h2>Popular Services</h2>
+    <button class="services-button" onclick="location.href='our-services.html'">Explore Our Services</button>
+  </section>
+  
+  <!-- Extra Activities and Team Building Section -->
+  <section class="activities">
+    <h2>Extra Activities and Team Building</h2>
+    <div class="activity-item">
+      <img src="images/hero.jpg" alt="Tree Planting Activity">
+      <p>Tree Planting Event - Our club participated in a tree planting exercise to promote sustainability and team bonding.</p>
+    </div>
+    <div class="activity-item">
+      <img src="images/hero.jpg" alt="Swimming Day">
+      <p>Swimming Team Building Day - Our club goes out for different types of fun, for example in this case, swimming.</p>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <h2>Straight-Forward Pricing</h2>
+    <div class="pricing-options">
+      <div class="pricing-box">Website - 20,000</div>
+      <div class="pricing-box">Training - 600</div>
+      <div class="pricing-box">Software - 30,000</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="newsletter">
+      <h3>Subscribe to Our Newsletter</h3>
+      <input type="email" placeholder="Enter your email">
+      <button>Subscribe</button>
+    </div>
+    <div class="footer-links">
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="our-services.html">Services</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+    </div>
+  </footer>
+  <script>
+    function toggleSearch() {
+      const overlay = document.getElementById('searchOverlay');
+      overlay.classList.toggle('active');
+    }
+
+    function handleEnter(event) {
+      if (event.key === "Enter") {
+        performSearch();
+      }
+    }
+
+    function performSearch() {
+      const query = document.getElementById('searchInput').value;
+      if (query.trim() === "") {
+        alert("Please enter a search term!");
+        return;
+      }
+      
+      // Simulate search results
+      displayResults(["Result 1", "Result 2", "Result 3"]);
+    }
+
+    function displayResults(results) {
+      const resultContainer = document.createElement("div");
+      resultContainer.classList.add("search-results");
+
+      resultContainer.innerHTML = `
+        <h2>Search Results:</h2>
+        <ul>${results.map(item => `<li>${item}</li>`).join('')}</ul>
+        <button onclick="closeResults()">Close</button>
+      `;
+
+      document.body.appendChild(resultContainer);
+    }
+
+    function closeResults() {
+      document.querySelector(".search-results").remove();
+    }
+  </script>
+</body>
+</html>
