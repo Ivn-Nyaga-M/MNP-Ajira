@@ -12,6 +12,9 @@ $(window).on("load", function () {
 
 $(document).ready(function () {
     let percentage = 0;
+    let duration = 3000;
+    let intervalTime = duration / 100;
+    
     let interval = setInterval(() => {
         percentage++;
         $("#loading-percentage").text(percentage + "%");
@@ -27,7 +30,7 @@ $(document).ready(function () {
                 }
             );
         }
-    }, 15); // Adjust speed as needed
+    }, 45); // Adjust speed as needed
 });
 
 

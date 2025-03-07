@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Our Services - Ajira Club</title>
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/#.css">
 </head>
 <body>
@@ -100,16 +101,26 @@
   </section>
   
   <footer>
-    <div class="newsletter">
-      <h3>Subscribe to Our Newsletter</h3>
-      <input type="email" placeholder="Enter your email">
-      <button>Subscribe</button>
-    </div>
-    <div class="footer-links">
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-      <li><a href="our-services.html">Services</a></li>
-      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+    <div class="footer-container">
+      <!-- Newsletter Section -->
+      <div class="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button>Subscribe</button>
+        </div>
+      </div>
+  
+      <!-- Footer Navigation Links -->
+      <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="our-services.html">Services</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+  
+      <!-- Copyright Section -->
+      <p class="copyright">&copy; 2025 MNP Ajira Club. All Rights Reserved.</p>
     </div>
   </footer>
   <style>
@@ -263,43 +274,6 @@
     .search-overlay-content button:hover {
       opacity: 0.9;
     }
-    /* Footer */
-  footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-    list-style: none; /* Removes bullet points */
-    padding: 0; /* Removes extra space */
-  }
-  .footer-links li {
-    list-style: none; /* Ensures no bullets */
-  }
-  .newsletter input {
-    padding: 10px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 5px;
-  }
-  .newsletter button {
-    padding: 10px 20px;
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-  }
   </style>
 </body>
 </html>
