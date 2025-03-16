@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jitume Taskers Progress Tracker</title>
+    <link rel="stylesheet" href="css/impact.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Ajira Club Progress Tracker Form</h2>
+        <form action="#" method="POST">
+            <label for="tasker-name">Full Name:</label>
+            <input type="text" id="tasker-name" name="tasker-name" required>
+
+            <label for="tasker-name">Email Address:</label>
+            <input type="email" id="tasker-email" name="tasker-email" required>
+
+            <label for="task-date">Date:</label>
+            <input type="date" id="task-date" name="task-date" required>
+
+            <label for="task-category">Task Category:</label>
+            <select id="task-category" name="task-category" required>
+                <option value="">Select Category</option>
+                <option value="web-design">Web Design</option>
+                <option value="graphic-design">Graphic Design</option>
+                <option value="content-writing">Content Writing</option>
+                <option value="data-entry">Data Entry</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="task-status">Task Status:</label>
+            <select id="task-status" name="task-status" required>
+                <option value="">Select Status</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+
+            <label for="task-details">Summary of Work:</label>
+            <textarea id="task-details" name="task-details" rows="5" required></textarea>
+
+            <label for="duration-details">Duration Taken:</label>
+            <textarea id="duration-details" name="duration-details" rows="2" required></textarea>
+
+            <label for="skills-details">Skills Used:</label>
+            <textarea id="skills-details" name="skills-details" rows="8" required></textarea>
+
+            <label for="client-status">Client Type:</label>
+            <select id="client-status" name="client-status" required>
+                <option value="">Select Client-type</option>
+                <option value="direct">Direct Client</option>
+                <option value="online">Online Platform</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="patform-status">Online Platform From Where Earned:</label>
+            <select id="platform-status" name="platform-status" required>
+                <option value="">Select Platform</option>
+                <option value="upwork">Upwork</option>
+                <option value="fiverr">Fiverr</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="amount-details">Amount Earned: (indicate currency)</label>
+            <textarea id="amount-details" name="amount-details" rows="2" required></textarea>
+
+            <label for="method-status">Payment Method:</label>
+            <select id="method-status" name="method-status" required>
+                <option value="">Select Method</option>
+                <option value="bank">Bank Transfer</option>
+                <option value="paypal">PayPal</option>
+                <option value="mpesa">M-pesa</option>
+                <option value="payoneer">Payoneer</option>
+                <option value="cash">Cash</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="Challenges">Challenges Faced:</label>
+            <textarea id="Challenges" name="Challenges" rows="3"></textarea>
+
+            <label for="task-remarks">Remarks:</label>
+            <textarea id="task-remarks" name="task-remarks" rows="3"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

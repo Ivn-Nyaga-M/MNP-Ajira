@@ -4,32 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MNP Ajira</title>
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   
   <!-- TOP BAR (Green) -->
   <div class="top-bar">
     <div class="top-bar-left">
-      <!-- Search button with inline SVG icon -->
       <button class="search-btn" onclick="toggleSearch()">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d="M10,2A8,8,0,0,1,18,10a7.92,7.92,0,0,1-1.34,4.44l5.85,5.85a1,1,0,1,1-1.41,1.41l-5.85-5.85A8,8,0,1,1,10,2Zm0,2a6,6,0,1,0,6,6A6,6,0,0,0,10,4Z"/>
         </svg>
       </button>
     </div>
+  
     <div class="top-bar-right">
-      <!-- Inline SVG placeholders for social icons -->
-      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M24,4.56a9.94,9.94,0,0,1-2.82.77A4.94,4.94,0,0,0,23.34,3a9.86,9.86,0,0,1-3.13,1.2A4.92,4.92,0,0,0,16.68,2a4.92,4.92,0,0,0-4.92,4.92,5.14,5.14,0,0,0,.13,1.12A14,14,0,0,1,1.64,2.85a4.9,4.9,0,0,0-.66,2.47A4.92,4.92,0,0,0,3.15,9.41,4.88,4.88,0,0,1,.96,9V9a4.93,4.93,0,0,0,3.94,4.82,4.9,4.9,0,0,1-2.21.08,4.93,4.93,0,0,0,4.6,3.42A9.86,9.86,0,0,1,0,19.54,13.9,13.9,0,0,0,7.55,21,14,14,0,0,0,21.59,7.06c0-.21,0-.42,0-.63A10,10,0,0,0,24,4.56Z"/>
-      </svg></a>
-      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M22.46,6A16.08,16.08,0,0,1,4.54,6,11.42,11.42,0,0,0,8,9.75,5.71,5.71,0,0,1,3.8,8.28v.07A5.71,5.71,0,0,0,5.67,13a5.64,5.64,0,0,1-2.58.1,5.72,5.72,0,0,0,5.33,4A11.46,11.46,0,0,1,2,18.58a16.17,16.17,0,0,0,8.74,2.56c10.48,0,16.2-8.68,15.88-16.46A11.42,11.42,0,0,0,24,4.56,11.07,11.07,0,0,1,22.46,6Z"/>
-      </svg></a>
-      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M12,2.16c3.2,0,3.58,0,4.84.07a6.08,6.08,0,0,1,4.29,1.56A6.08,6.08,0,0,1,22.69,8c.06,1.26.06,1.64.06,4.84s0,3.58-.06,4.84a6.08,6.08,0,0,1-1.56,4.29A6.08,6.08,0,0,1,16.84,23.69c-1.26.06-1.64.06-4.84.06s-3.58,0-4.84-.06a6.08,6.08,0,0,1-4.29-1.56A6.08,6.08,0,0,1,1.31,17.68c-.06-1.26-.06-1.64-.06-4.84s0-3.58.06-4.84A6.08,6.08,0,0,1,2.87,4.71,6.08,6.08,0,0,1,7.16,3.16c1.26-.06,1.64-.06,4.84-.06M12,0C8.74,0,8.33,0,7.05.07A8.09,8.09,0,0,0,1.39,2.36,8.1,8.1,0,0,0,.07,7.05C0,8.33,0,8.74,0,12s0,3.67.07,4.95a8.12,8.12,0,0,0,2.29,5.66A8.09,8.09,0,0,0,7.05,24c1.28.07,1.69.07,4.95.07s3.67,0,4.95-.07a8.09,8.09,0,0,0,5.66-2.29A8.12,8.12,0,0,0,24,16.05c.07-1.28.07-1.69.07-4.95s0-3.67-.07-4.95A8.09,8.09,0,0,0,21.64,1.39,8.09,8.09,0,0,0,16.95.07C15.67,0,15.26,0,12,0Z"/>
-        <circle cx=\"12\" cy=\"12\" r=\"3.2\"/>
-      </svg></a>
+      <a href="https://www.facebook.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+          <span>Facebook</span>
+        </div>
+      </a>
+
+      <a href="https://www.linkedin.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+          <span>LinkedIn</span>
+        </div>
+      </a>
+  
+      <a href="https://www.x.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-square-x-twitter"></i></div>
+          <span>Twitter</span>
+        </div>
+      </a>
+  
+      <a href="https://www.instagram.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fab fa-instagram"></i></div>
+          <span>Instagram</span>
+        </div>
+      </a>
+  
+      <a href="https://www.youtube.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-youtube"></i></i></div>
+          <span>YouTube</span>
+        </div>
+      </a>
+  
+      <a href="https://www.tiktok.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-tiktok"></i></div>
+          <span>TikTok</span>
+        </div>
+      </a>
+  
+      <a href="https://www.whatsapp.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fab fa-whatsapp"></i></div>
+          <span>WhatsApp</span>
+        </div>
+      </a>
     </div>
   </div>
   
@@ -68,7 +108,10 @@
     <div class="hero-content">
       <h1>MNP Ajira</h1>
       <p>
-        Unlock online career opportunities with expert training and support for a successful digital future.
+        Unlock online career opportunities with expert training and support for a successful digital future. </br>
+        MNP Ajira empowers individuals with the skills and knowledge needed to thrive in the digital economy. 
+        Through expert training, mentorship, and hands-on guidance, we help you explore online career opportunities, from freelancing to remote work and digital entrepreneurship. 
+        Whether you're a beginner or looking to enhance your skills, our programs provide the support and resources necessary for a successful and sustainable digital future.
       </p>
       <div class="hero-buttons">
         <button><a href="./register.html">Join Us</a></button>
@@ -83,54 +126,73 @@
   <section class="hero">
     <h1>MNP Ajira Club</h1>
     <p>Learn digital skills and earn through online work.</p>
-    <button class="hero-btn">Join Us</button>
-    <button class="hero-btn">Learn More</button>
+    <button><a href="impact.html">Share Impact</a></button>
   </section>
 
   <section class="trainings">
     <h2>Join MNP Ajira Digital Club for tailored trainings.</h2>
     <p class="training-subtitle">Personalized online training opportunities tailored just for your career growth</p>
     <div class="training-list">
-      <div class="training-item">
-        <img src="dummy.jpg" alt="Data Entry">
-        <h3>Data Entry</h3>
-        <p>Develop accurate and efficient data entry skills.</p>
-      </div>
-      <div class="training-item">
-        <img src="dummy.jpg" alt="Transcription">
-        <h3>Transcription</h3>
-        <p>Master transcription skills for career advancement and professional opportunities.</p>
-      </div>
-      <div class="training-item">
-        <img src="dummy.jpg" alt="Graphic Design">
-        <h3>Graphic Design</h3>
-        <p>Create stunning visuals and marketing materials.</p>
-      </div>
-      <div class="training-item">
-        <img src="dummy.jpg" alt="Data Analysis">
-        <h3>Data Analysis</h3>
-        <p>Dive into artificial intelligence and data analytics.</p>
-      </div>
-      <div class="training-item">
-        <img src="dummy.jpg" alt="Digital Marketing">
-        <h3>Digital Marketing</h3>
-        <p>Master online marketing strategies for business growth.</p>
-      </div>
-      <div class="training-item">
-        <img src="dummy.jpg" alt="Content Writing">
-        <h3>Content Writing</h3>
-        <p>Create compelling content that drives engagement.</p>
-      </div>
-      <div class="training-item">
-        <img src="dummy.jpg" alt="SEO">
-        <h3>SEO</h3>
-        <p>Improve website rankings with search engine optimization techniques.</p>
-      </div>
-    </div>
+      <a href="data-entry.html" class="training-link">
+        <div class="training-item">
+          <img src="images/data_entry.png" alt="Data Entry">
+          <h3>Data Entry</h3>
+          <p>Develop accurate and efficient data entry skills.</p>
+        </div>
+      </a>
+  
+      <a href="transcription.html" class="training-link">
+        <div class="training-item">
+          <img src="images/transcription.png" alt="Transcription">
+          <h3>Transcription</h3>
+          <p>Master transcription skills for career advancement and professional opportunities.</p>
+        </div>
+      </a>
+  
+      <a href="graphic-design.html" class="training-link">
+        <div class="training-item">
+          <img src="images/graphic.png" alt="Graphic Design">
+          <h3>Graphic Design</h3>
+          <p>Create stunning visuals and marketing materials.</p>
+        </div>
+      </a>
+  
+      <a href="data-analysis.html" class="training-link">
+        <div class="training-item">
+          <img src="images/analysis.png" alt="Data Analysis">
+          <h3>Data Analysis</h3>
+          <p>Dive into artificial intelligence and data analytics.</p>
+        </div>
+      </a>
+  
+      <a href="digital-marketing.html" class="training-link">
+        <div class="training-item">
+          <img src="images/marketing.png" alt="Digital Marketing">
+          <h3>Digital Marketing</h3>
+          <p>Master online marketing strategies for business growth.</p>
+        </div>
+      </a>
+  
+      <a href="content-writing.html" class="training-link">
+        <div class="training-item">
+          <img src="images/content.png" alt="Content Writing">
+          <h3>Content Writing</h3>
+          <p>Create compelling content that drives engagement.</p>
+        </div>
+      </a>
+  
+      <a href="seo.html" class="training-link">
+        <div class="training-item">
+          <img src="images/seo.png" alt="SEO">
+          <h3>SEO</h3>
+          <p>Improve website rankings with search engine optimization techniques.</p>
+        </div>
+      </a>
+  </div>
+  
     <div class="training-contact">
-      <button class="contact-button">Contact Us</button>
+      <button class="contact-button"><a href="contact.html">Contact Us</a></button>
     </div>
-  </section>
 
   <!-- Popular Services Section now features a button -->
   <section class="popular-services">
@@ -142,12 +204,28 @@
   <section class="activities">
     <h2>Extra Activities and Team Building</h2>
     <div class="activity-item">
-      <img src="images/hero.jpg" alt="Tree Planting Activity">
-      <p>Tree Planting Event - Our club participated in a tree planting exercise to promote sustainability and team bonding.</p>
+      <img src="images/planting.jpeg" alt="Tree Planting Activity">
+      <p>At MNP Ajira, we are committed to making a positive impact both online and offline. 
+        Our tree-planting activities symbolize growth, sustainability, and teamwork—values that define our community. 
+        By coming together to plant trees, we not only contribute to a greener environment but also strengthen our bond as a team, fostering a spirit of collaboration and responsibility.</p>
     </div>
     <div class="activity-item">
-      <img src="images/hero.jpg" alt="Swimming Day">
-      <p>Swimming Team Building Day - Our club goes out for different types of fun, for example in this case, swimming.</p>
+      <img src="images/swimming.jpg" alt="Swimming Day">
+      <p>We believe in building strong connections beyond the digital space. 
+        Our team-building activities, like fun outings and group challenges, foster collaboration, creativity, and lasting friendships. 
+        Whether it’s a refreshing day at the pool or engaging in exciting group tasks, we ensure a balanced mix of learning, networking, and relaxation.</p>
+    </div>
+    <div class="activity-item">
+      <img src="images/dart.jpg" alt="Game of Darts">
+      <p>After a productive day of online work, our team unwinds with a friendly game of darts. 
+        It’s more than just a game—it’s a way to relax, sharpen focus, and enjoy some lighthearted competition. 
+        These moments of fun and camaraderie help us recharge, fostering teamwork and a balanced work-life culture.🎯</p>
+    </div>
+    <div class="activity-item">
+      <img src="images/outdoor.jpg" alt="Oudoor Activity">
+      <p>Surrounded by the towering trees and the peaceful sounds of nature, our team takes a well-earned break after an adventurous hike. 
+        This journey was more than just a physical challenge—it was a chance to connect, reflect, and appreciate the beauty of the outdoors together. 
+        Moments like these strengthen our bond, reminding us that teamwork extends beyond the digital world.🌿🏞️</p>
     </div>
   </section>
 
@@ -161,18 +239,29 @@
   </section>
 
   <footer>
-    <div class="newsletter">
-      <h3>Subscribe to Our Newsletter</h3>
-      <input type="email" placeholder="Enter your email">
-      <button>Subscribe</button>
-    </div>
-    <div class="footer-links">
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-      <li><a href="our-services.html">Services</a></li>
-      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+    <div class="footer-container">
+      <!-- Newsletter Section -->
+      <div class="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button>Subscribe</button>
+        </div>
+      </div>
+  
+      <!-- Footer Navigation Links -->
+      <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="our-services.html">Services</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+  
+      <!-- Copyright Section -->
+      <p class="copyright">&copy; 2025 MNP Ajira Club. All Rights Reserved.</p>
     </div>
   </footer>
+  
   <script>
     function toggleSearch() {
       const overlay = document.getElementById('searchOverlay');
