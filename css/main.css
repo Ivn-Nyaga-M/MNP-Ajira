@@ -25,6 +25,7 @@
   padding: 5px 20px;
   }
     
+<<<<<<< HEAD
 /* =========================
    1) TOP BAR (GREEN)
   ========================= */
@@ -36,12 +37,18 @@
   padding: 5px 20px;
   }
         
+=======
+>>>>>>> 57e7239be4af25761d77e43037597faeff721a57
   /* Left side: Search icon */
   .top-bar-left {
   display: flex;
   align-items: center;
   }
+<<<<<<< HEAD
         
+=======
+    
+>>>>>>> 57e7239be4af25761d77e43037597faeff721a57
   .search-btn {
   background: none;
   border: none;
@@ -50,13 +57,18 @@
   display: flex;
   align-items: center;
   }
+<<<<<<< HEAD
         
+=======
+    
+>>>>>>> 57e7239be4af25761d77e43037597faeff721a57
   .search-btn svg {
   width: 20px;
   height: 20px;
   fill: #fff;
   transition: opacity 0.3s;
   }
+<<<<<<< HEAD
         
   .search-btn:hover svg {
   opacity: 0.8;
@@ -74,21 +86,49 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+=======
+    
+  .search-btn:hover svg {
+  opacity: 0.8;
+  }
+    
+    /* Right side: Social icons */
+  .top-bar-right {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+    
+  .button {
+  display: flex;
+  align-items: left;
+  justify-content: left; /* Centers icon */
+>>>>>>> 57e7239be4af25761d77e43037597faeff721a57
   width: 30px; /* Make it a circle */
   height: 30px; /* Make it a circle */
   margin: 0 5px;
   background: #fff;
+<<<<<<< HEAD
   border-radius: 50px;
+=======
+  border-radius: 40px;
+>>>>>>> 57e7239be4af25761d77e43037597faeff721a57
   box-shadow: 0px 10px;
   gap: 10px;
   overflow: hidden;
   transition: width 0.3s ease-out;
   white-space: nowrap;
+<<<<<<< HEAD
   background: #e1306c;
+=======
+  background: white;
+>>>>>>> 57e7239be4af25761d77e43037597faeff721a57
   border-radius: 50px;
   padding: 5px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   }
+<<<<<<< HEAD
         
   .button:hover {
   width: 120px; /* Expands on hover */
@@ -124,17 +164,59 @@
   }
         
   /* Icon colors */
+=======
+    
+  .button:hover {
+  width: 150px; /* Expands on hover */
+  }
+    
+  .button .icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: background 0.3s, color 0.3s;
+  color: black; /* Icons are always visible */
+  }
+    
+  /* Keep the icon visible and only show the name */
+  .button:hover .icon {
+    background: white; /* No background change */
+  }
+  
+   .button span {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    font-size: 14px;
+    color: black;
+  }
+    
+  .button:hover span {
+  opacity: 1;
+  }
+    
+    /* Icon colors */
+>>>>>>> 57e7239be4af25761d77e43037597faeff721a57
   .button:nth-child(1) .icon { color: #4267b2; } /* Facebook */
   .button:nth-child(2) .icon { color: #1da1f2; } /* Twitter */
   .button:nth-child(3) .icon { color: #e1306c; } /* Instagram */
   .button:nth-child(4) .icon { color: #ff0000; } /* YouTube */
   .button:nth-child(5) .icon { color: black; } /* TikTok */
   .button:nth-child(6) .icon { color: #25D366; } /* WhatsApp */
+<<<<<<< HEAD
+=======
+    
+    
+>>>>>>> 57e7239be4af25761d77e43037597faeff721a57
   
   /* =========================
      2) MAIN NAV (WHITE)
      ========================= */
   .main-nav {
+<<<<<<< HEAD
     color: #046307; /* Ensures text inside inherits this color */
     background-color: #fff;
     display: flex;
@@ -144,6 +226,17 @@
     border-bottom: 1px solid #ddd;
     margin-right: 15%;
     margin-left: 5%;
+=======
+  color: #046307; /* Ensures text inside inherits this color */
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 5px;
+  border-bottom: 1px solid #ddd;
+  margin-right: 15%;
+  margin-left: 5%;
+>>>>>>> 57e7239be4af25761d77e43037597faeff721a57
   }
   
   .logo {
@@ -153,8 +246,13 @@
   }
   
   .logo img {
+<<<<<<< HEAD
     width: 150px; /* Adjust size */
     height: 150px;
+=======
+  width: 150px; /* Adjust size */
+  height: 150px;
+>>>>>>> 57e7239be4af25761d77e43037597faeff721a57
   }
   
   nav ul {
@@ -254,7 +352,11 @@
 
 
   /* Footer Styling */
+<<<<<<< HEAD
   footer {
+=======
+footer {
+>>>>>>> 57e7239be4af25761d77e43037597faeff721a57
     background-color: #222;
     color: white;
     text-align: center;
