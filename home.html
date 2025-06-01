@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MNP Ajira</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  
+  <!-- TOP BAR (Green) -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <button class="search-btn" onclick="toggleSearch()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M10,2A8,8,0,0,1,18,10a7.92,7.92,0,0,1-1.34,4.44l5.85,5.85a1,1,0,1,1-1.41,1.41l-5.85-5.85A8,8,0,1,1,10,2Zm0,2a6,6,0,1,0,6,6A6,6,0,0,0,10,4Z"/>
+        </svg>
+      </button>
+    </div>
+  
+    <div class="top-bar-right">
+      <a href="https://www.facebook.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+          <span>Facebook</span>
+        </div>
+      </a>
+
+      <a href="https://www.linkedin.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+          <span>LinkedIn</span>
+        </div>
+      </a>
+  
+      <a href="https://www.x.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-square-x-twitter"></i></div>
+          <span>Twitter</span>
+        </div>
+      </a>
+  
+      <a href="https://www.instagram.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fab fa-instagram"></i></div>
+          <span>Instagram</span>
+        </div>
+      </a>
+  
+      <a href="https://www.youtube.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-youtube"></i></i></div>
+          <span>YouTube</span>
+        </div>
+      </a>
+  
+      <a href="https://www.tiktok.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-tiktok"></i></div>
+          <span>TikTok</span>
+        </div>
+      </a>
+  
+      <a href="https://www.whatsapp.com" target="_blank">
+        <div class="button">
+          <div class="icon"><i class="fab fa-whatsapp"></i></div>
+          <span>WhatsApp</span>
+        </div>
+      </a>
+    </div>
+  </div>
+  
+  <!-- MAIN NAV (White) -->
+  <div class="main-nav">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="MNP Ajira Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="register.html">My account</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- SEARCH OVERLAY POPUP -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-overlay-content">
+    <input type="text" id="searchInput" placeholder="Type your search here..." onkeydown="handleEnter(event)"/>
+    <br/>
+    <button onclick="performSearch()">Search</button>
+    <button onclick="toggleSearch()">Close</button>
+  </div>
+</div>
+
+  <!-- HERO SECTION (EXAMPLE) -->
+  <section class="hero-section">
+    <!-- Left: Heading & Text -->
+    <div class="hero-content">
+      <h1>MNP Ajira</h1>
+      <p>
+        Unlock online career opportunities with expert training and support for a successful digital future. </br>
+        MNP Ajira empowers individuals with the skills and knowledge needed to thrive in the digital economy. 
+        Through expert training, mentorship, and hands-on guidance, we help you explore online career opportunities, from freelancing to remote work and digital entrepreneurship. 
+        Whether you're a beginner or looking to enhance your skills, our programs provide the support and resources necessary for a successful and sustainable digital future.
+      </p>
+      <div class="hero-buttons">
+        <button><a href="./register.html">Join Us</a></button>
+        <button><a href="./about.html">Learn More</a></button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero2.jpg" alt="Hero Image"/>
+    </div>
+  </section>
+  
+  <section class="hero">
+    <h1>MNP Ajira Club</h1>
+    <p>Learn digital skills and earn through online work.</p>
+    <button><a href="impact.html">Share Impact</a></button>
+    <button><a href="mentor.html">Find a Mentor</a></button>
+  </section>
+
+  <section class="trainings">
+    <h2>Join MNP Ajira Digital Club for tailored trainings.</h2>
+    <p class="training-subtitle">Personalized online training opportunities tailored just for your career growth</p>
+    <div class="training-list">
+      <a href="data-entry.html" class="training-link">
+        <div class="training-item">
+          <img src="images/data_entry.png" alt="Data Entry">
+          <h3>Data Entry</h3>
+          <p>Develop accurate and efficient data entry skills.</p>
+        </div>
+      </a>
+  
+      <a href="transcription.html" class="training-link">
+        <div class="training-item">
+          <img src="images/transcription.png" alt="Transcription">
+          <h3>Transcription</h3>
+          <p>Master transcription skills for career advancement and professional opportunities.</p>
+        </div>
+      </a>
+  
+      <a href="graphic-design.html" class="training-link">
+        <div class="training-item">
+          <img src="images/graphic.png" alt="Graphic Design">
+          <h3>Graphic Design</h3>
+          <p>Create stunning visuals and marketing materials.</p>
+        </div>
+      </a>
+  
+      <a href="data-analysis.html" class="training-link">
+        <div class="training-item">
+          <img src="images/analysis.png" alt="Data Analysis">
+          <h3>Data Analysis</h3>
+          <p>Dive into artificial intelligence and data analytics.</p>
+        </div>
+      </a>
+  
+      <a href="digital-marketing.html" class="training-link">
+        <div class="training-item">
+          <img src="images/marketing.png" alt="Digital Marketing">
+          <h3>Digital Marketing</h3>
+          <p>Master online marketing strategies for business growth.</p>
+        </div>
+      </a>
+  
+      <a href="content-writing.html" class="training-link">
+        <div class="training-item">
+          <img src="images/content.png" alt="Content Writing">
+          <h3>Content Writing</h3>
+          <p>Create compelling content that drives engagement.</p>
+        </div>
+      </a>
+  
+      <a href="seo.html" class="training-link">
+        <div class="training-item">
+          <img src="images/seo.png" alt="SEO">
+          <h3>SEO</h3>
+          <p>Improve website rankings with search engine optimization techniques.</p>
+        </div>
+      </a>
+  </div>
+  
+    <div class="training-contact">
+      <button class="contact-button"><a href="contact.html">Contact Us</a></button>
+    </div>
+
+  <!-- Popular Services Section now features a button -->
+  <section class="popular-services">
+    <h2>Popular Services</h2>
+    <button class="services-button" onclick="location.href='our-services.html'">Explore Our Services</button>
+  </section>
+  
+  <!-- Extra Activities and Team Building Section -->
+  <section class="activities">
+    <h2>Extra Activities and Team Building</h2>
+    <div class="activity-item">
+      <img src="images/planting.jpeg" alt="Tree Planting Activity">
+      <p>At MNP Ajira, we are committed to making a positive impact both online and offline. 
+        Our tree-planting activities symbolize growth, sustainability, and teamwork—values that define our community. 
+        By coming together to plant trees, we not only contribute to a greener environment but also strengthen our bond as a team, fostering a spirit of collaboration and responsibility.</p>
+    </div>
+    <div class="activity-item">
+      <img src="images/swimming.jpg" alt="Swimming Day">
+      <p>We believe in building strong connections beyond the digital space. 
+        Our team-building activities, like fun outings and group challenges, foster collaboration, creativity, and lasting friendships. 
+        Whether it’s a refreshing day at the pool or engaging in exciting group tasks, we ensure a balanced mix of learning, networking, and relaxation.</p>
+    </div>
+    <div class="activity-item">
+      <img src="images/dart.jpg" alt="Game of Darts">
+      <p>After a productive day of online work, our team unwinds with a friendly game of darts. 
+        It’s more than just a game—it’s a way to relax, sharpen focus, and enjoy some lighthearted competition. 
+        These moments of fun and camaraderie help us recharge, fostering teamwork and a balanced work-life culture.🎯</p>
+    </div>
+    <div class="activity-item">
+      <img src="images/outdoor.jpg" alt="Oudoor Activity">
+      <p>Surrounded by the towering trees and the peaceful sounds of nature, our team takes a well-earned break after an adventurous hike. 
+        This journey was more than just a physical challenge—it was a chance to connect, reflect, and appreciate the beauty of the outdoors together. 
+        Moments like these strengthen our bond, reminding us that teamwork extends beyond the digital world.🌿🏞️</p>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <h2>Straight-Forward Pricing</h2>
+    <div class="pricing-options">
+      <div class="pricing-box">Website - 20,000</div>
+      <div class="pricing-box">Training - 600</div>
+      <div class="pricing-box">Software - 30,000</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <!-- Newsletter Section -->
+      <div class="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button>Subscribe</button>
+        </div>
+      </div>
+  
+      <!-- Footer Navigation Links -->
+      <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="our-services.html">Services</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+  
+      <!-- Copyright Section -->
+      <p class="copyright">&copy; 2025 MNP Ajira Club. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+  <script>
+    function toggleSearch() {
+      const overlay = document.getElementById('searchOverlay');
+      overlay.classList.toggle('active');
+    }
+
+    function handleEnter(event) {
+      if (event.key === "Enter") {
+        performSearch();
+      }
+    }
+
+    function performSearch() {
+      const query = document.getElementById('searchInput').value;
+      if (query.trim() === "") {
+        alert("Please enter a search term!");
+        return;
+      }
+      
+      // Simulate search results
+      displayResults(["Result 1", "Result 2", "Result 3"]);
+    }
+
+    function displayResults(results) {
+      const resultContainer = document.createElement("div");
+      resultContainer.classList.add("search-results");
+
+      resultContainer.innerHTML = `
+        <h2>Search Results:</h2>
+        <ul>${results.map(item => `<li>${item}</li>`).join('')}</ul>
+        <button onclick="closeResults()">Close</button>
+      `;
+
+      document.body.appendChild(resultContainer);
+    }
+
+    function closeResults() {
+      document.querySelector(".search-results").remove();
+    }
+  </script>
+</body>
+</html>
