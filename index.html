@@ -1,16 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preloader Example</title>
-    <!-- Link to the CSS file -->
-    <link rel="stylesheet" href="css/index.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MNP Ajira</title>
 
+  <style>
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    background: #000; /* Fallback */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Background Image with blur */
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('assets/images/hero2.jpg') no-repeat center center/cover;
+    filter: blur(6px);
+    z-index: 0;
+  }
+
+  /* Dark overlay */
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: none;
+    z-index: 0;
+  }
+
+  /* Content stays on top */
+  .hero-section .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Buttons */
+  .btn-hero {
+    background: linear-gradient(45deg, #006400, #228B22);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .btn-hero:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #228B22, #006400);
+  }
+
+  .btn-outline-light {
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2.2rem;
+    }
+
+    .hero-section p {
+      font-size: 1rem;
+    }
+
+    .btn-hero, .btn-outline-light {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  </style>
+
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div id="body-overlay" class="body-overlay"></div>
+
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Preloader
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -18,7 +98,7 @@
 <div class="preloader">
     <div class="loader-inner">
         <div class="loader-circle">
-            <img src="images/logo.png" alt="Preloader">
+            <img src="assets/images/logo.png" alt="Preloader">
         </div>
         <div class="loader-line-mask">
             <div class="loader-line"></div>
@@ -30,20 +110,276 @@
     </div>
 </div>
 
-    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Preloader
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--> 
+    <!-- TOP BAR (Green) -->
+    <div class="top-bar d-flex justify-content-between align-items-center px-3 py-2">
+      <!-- Search Icon -->
+      <div class="top-bar-left d-flex align-items-center">
+        <button class="search-btn" onclick="toggleSearch()">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M10,2A8,8,0,0,1,18,10a7.92,7.92,0,0,1-1.34,4.44l5.85,5.85a1,1,0,1,1-1.41,1.41l-5.85-5.85A8,8,0,1,1,10,2Zm0,2a6,6,0,1,0,6,6A6,6,0,0,0,10,4Z"/>
+          </svg>
+        </button>
+      </div>
 
-    <!-- Main content -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>Welcome to MNP Ajira Club Website</h1>
-            <p>Discover amazing content and explore new horizons.</p>
-            <a href="home.html" class="btn">Get Started</a>
+      <!-- Social Icons -->
+      <div class="top-bar-right d-flex align-items-center gap-2 flex-wrap">
+        <a href="https://www.facebook.com" target="_blank">
+          <div class="button"><div class="icon icon-facebook"><i class="fab fa-facebook-f"></i></div><span>Facebook</span></div>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+          <div class="button"><div class="icon icon-linkedin"><i class="fab fa-linkedin-in"></i></div><span>LinkedIn</span></div>
+        </a>
+        <a href="https://www.x.com" target="_blank">
+          <div class="button"><div class="icon icon-x"><i class="fa-brands fa-square-x-twitter"></i></div><span>Twitter</span></div>
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <div class="button"><div class="icon icon-instagram"><i class="fab fa-instagram"></i></div><span>Instagram</span></div>
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+          <div class="button"><div class="icon icon-youtube"><i class="fab fa-youtube"></i></div><span>YouTube</span></div>
+        </a>
+        <a href="https://www.tiktok.com" target="_blank">
+          <div class="button"><div class="icon icon-tiktok"><i class="fab fa-tiktok"></i></div><span>TikTok</span></div>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank">
+          <div class="button"><div class="icon icon-whatsapp"><i class="fab fa-whatsapp"></i></div><span>WhatsApp</span></div>
+        </a>
+      </div>
+    </div>
+
+  
+  <!-- MAIN NAV (White) -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 main-nav">
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/images/logo.png" alt="MNP Ajira Logo" style="height: 50px;">
+    </a>
+
+    <!-- Hamburger button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="our-services.html">Our Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="register.html">My Account</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="privacy-policy.html">privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+<!-- SEARCH OVERLAY POPUP -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-overlay-content">
+    <input type="text" id="searchInput" class="form-control mb-2" placeholder="Type your search here..." onkeydown="handleEnter(event)" />
+    <div class="d-flex gap-2">
+      <button class="btn btn-success" onclick="performSearch()">Search</button>
+      <button class="btn btn-outline-secondary" onclick="toggleSearch()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- SEARCH RESULTS -->
+<div class="search-results d-none" id="searchResults">
+  <h4>Search Results</h4>
+  <ul id="resultsList"></ul>
+  <button onclick="closeSearchResults()">Close</button>
+</div>
+
+
+<!-- HERO SECTION -->
+<section class="hero-section d-flex align-items-center justify-content-center text-white">
+  <div class="container text-center position-relative z-1">
+    <h1 class="display-4 fw-bold">MNP Ajira Club</h1>
+    <p class="lead mb-3">
+      Unlock online career opportunities with expert training and support for a successful digital future.
+    </p>
+    <p class="mb-4">
+      Learn digital skills and earn through online work.
+    </p>
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+      <a href="register.html" class="btn btn-hero">Join Us</a>
+      <a href="about.html" class="btn btn-outline-light">Learn More</a>
+      <a href="mentor.html" class="btn btn-outline-light">Find a Mentor</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- trainings section -->
+  <section class="trainings py-5 text-center">
+  <div class="container">
+    <h2 class="mb-3">Join MNP Ajira Digital Club for tailored trainings.</h2>
+    <p class="training-subtitle text-muted mb-5">
+      Personalized online training opportunities tailored just for your career growth
+    </p>
+
+    <div class="row g-4">
+      <!-- Each training item -->
+      <div class="col-12 col-sm-6 col-md-4">
+        <a href="data-entry.html" class="text-decoration-none text-dark">
+          <div class="training-item h-100 p-3">
+            <img src="dummy.jpg" alt="Data Entry" class="img-fluid rounded mb-3" />
+            <h3 class="text-success">Data Entry</h3>
+            <p>Develop accurate and efficient data entry skills.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <a href="transcription.html" class="text-decoration-none text-dark">
+          <div class="training-item h-100 p-3">
+            <img src="dummy.jpg" alt="Transcription" class="img-fluid rounded mb-3" />
+            <h3 class="text-success">Transcription</h3>
+            <p>Master transcription skills for career advancement and professional opportunities.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <a href="graphic-design.html" class="text-decoration-none text-dark">
+          <div class="training-item h-100 p-3">
+            <img src="dummy.jpg" alt="Graphic Design" class="img-fluid rounded mb-3" />
+            <h3 class="text-success">Graphic Design</h3>
+            <p>Create stunning visuals and marketing materials.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <a href="data-analysis.html" class="text-decoration-none text-dark">
+          <div class="training-item h-100 p-3">
+            <img src="dummy.jpg" alt="Data Analysis" class="img-fluid rounded mb-3" />
+            <h3 class="text-success">Data Analysis</h3>
+            <p>Dive into artificial intelligence and data analytics.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <a href="digital-marketing.html" class="text-decoration-none text-dark">
+          <div class="training-item h-100 p-3">
+            <img src="dummy.jpg" alt="Digital Marketing" class="img-fluid rounded mb-3" />
+            <h3 class="text-success">Digital Marketing</h3>
+            <p>Master online marketing strategies for business growth.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <a href="content-writing.html" class="text-decoration-none text-dark">
+          <div class="training-item h-100 p-3">
+            <img src="dummy.jpg" alt="Content Writing" class="img-fluid rounded mb-3" />
+            <h3 class="text-success">Content Writing</h3>
+            <p>Create compelling content that drives engagement.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 mx-auto">
+        <a href="seo.html" class="text-decoration-none text-dark">
+          <div class="training-item h-100 p-3">
+            <img src="dummy.jpg" alt="SEO" class="img-fluid rounded mb-3" />
+            <h3 class="text-success">SEO</h3>
+            <p>Improve website rankings with search engine optimization techniques.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <a href="contact.html" class="btn btn-success rounded px-4 py-2">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Popular Services Section -->
+<section class="popular-services py-5 text-center bg-light">
+  <div class="container">
+    <h2 class="mb-4">Popular Services</h2>
+    <a href="our-services.html" class="btn btn-success px-4 py-2 rounded">Explore Our Services</a>
+  </div>
+</section>
+
+<!-- Extra Activities and Team Building Section -->
+<section class="activities py-5 text-center">
+  <div class="container">
+    <h2 class="mb-5">Extra Activities and Team Building</h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="activity-item p-3 bg-light rounded shadow-sm h-100">
+          <img src="images/hero.jpg" alt="Tree Planting Activity" class="img-fluid rounded mb-3" />
+          <p>Tree Planting Event - Our club participated in a tree planting exercise to promote sustainability and team bonding.</p>
         </div>
-    </section>
+      </div>
 
-    <!-- Link to the JavaScript file -->
-    <script src="js/index.js"></script> 
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="activity-item p-3 bg-light rounded shadow-sm h-100">
+          <img src="images/hero2.jpg" alt="Swimming Day" class="img-fluid rounded mb-3" />
+          <p>Swimming Team Building Day - Our club goes out for different types of fun, for example in this case, swimming.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing py-5 text-center bg-light">
+  <div class="container">
+    <h2 class="mb-4">Straight-Forward Pricing</h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="pricing-box p-4 bg-secondary text-white rounded">Website - 20,000</div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="pricing-box p-4 bg-secondary text-white rounded">Training - 600</div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="pricing-box p-4 bg-secondary text-white rounded">Software - 30,000</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="bg-dark text-white text-center py-5">
+  <div class="container">
+
+    <!-- Newsletter -->
+    <div class="mb-4">
+      <h3 class="mb-3">Subscribe to Our Newsletter</h3>
+      <form class="d-flex justify-content-center gap-2 flex-wrap">
+        <input type="email" class="form-control w-auto" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-success">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="footer-links d-flex justify-content-center flex-wrap gap-3 my-3">
+      <a href="about.html" class="text-white text-decoration-none">About Us</a>
+      <a href="contact.html" class="text-white text-decoration-none">Contact</a>
+      <a href="our-services.html" class="text-white text-decoration-none">Services</a>
+      <a href="privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a>
+    </div>
+
+    <!-- Copyright -->
+    <p class="mb-0 small opacity-75 mt-3">&copy; 2025 MNP Ajira Club. All Rights Reserved.</p>
+
+  </div>
+</footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

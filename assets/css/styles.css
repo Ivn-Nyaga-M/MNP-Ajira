@@ -1,0 +1,265 @@
+/* Preloader Container */
+.preloader {
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #058306;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* Loader Circle */
+.loader-circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    margin-left: -60px;
+    margin-top: -60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-circle img {
+    width: 100%;
+    height: 100%;
+    margin-left: 25px;
+    object-fit: contain;
+}
+
+/* Rotating Loader Line */
+.loader-line-mask {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 120px;
+    margin-left: -60px;
+    margin-top: -60px;
+    overflow: hidden;
+    transform-origin: 60px 60px;
+    animation: rotate 1.2s infinite linear;
+}
+
+.loader-line {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border-top: 4px solid #ffffff; /* Adjust color */
+}
+
+/* Centered Loader Text */
+.loader-text {
+  position: absolute;
+  bottom: 20%;
+  margin-bottom: 10px; /* Spacing below the copyright text */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* top bar */
+.top-bar {
+  background-color: #046307; /* Deep green */
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.search-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  transition: opacity 0.3s;
+}
+
+.search-btn:hover svg {
+  opacity: 0.8;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 30px;
+  height: 30px;
+  margin: 0 3px;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: width 0.3s ease-out;
+  white-space: nowrap;
+  padding: 5px;
+  gap: 8px;
+}
+
+.button:hover {
+  width: 150px;
+}
+
+.button .icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: black;
+}
+
+.button span {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  font-size: 14px;
+  color: black;
+}
+
+.button:hover span {
+  opacity: 1;
+}
+
+/* Individual icon colors */
+.icon-facebook { color: #4267b2; }
+.icon-linkedin { color: #0a66c2; }
+.icon-x { color: #000; }
+.icon-instagram { color: #e1306c; }
+.icon-youtube { color: #ff0000; }
+.icon-tiktok { color: #000000; }
+.icon-whatsapp { color: #25D366; }
+
+
+/* main nav-bar */
+.main-nav {
+  border-top: 3px solid #046307; /* Optional: thin green accent bar */
+}
+
+.navbar-nav .nav-link {
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #046307;
+}
+
+
+
+/* search overlay */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.search-overlay-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+
+/* SEARCH RESULTS */
+.search-results {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 10000;
+  text-align: center;
+  max-width: 90%;
+  width: 400px;
+}
+.search-results ul {
+  list-style: none;
+  padding: 0;
+}
+.search-results li {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+.search-results a {
+  text-decoration: none;
+  color: #046307;
+}
+.search-results button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #046307;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* trainings section */
+.training-item {
+  background-color: #eee;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.training-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* other */
+.activity-item:hover,
+.pricing-box:hover {
+  transform: scale(1.03);
+  transition: 0.3s ease-in-out;
+}
+
+
+/* footer */
+.footer-links a:hover {
+  color: #1da1f2;
+  transition: color 0.3s ease;
+}
